@@ -2,9 +2,23 @@ import glfw
 from OpenGL.GL import *
 
 def render():
-    pass
+    
+    glClear(GL_COLOR_BUFFER_BIT)
+    glLoadIdentity()
+    
+    glBegin(GL_TRIANGLES)
+    glColor3f(1,0,0)
+    glVertex2f(0.,1.)
+
+    glColor3f(0,1,0)
+    glVertex2f(-1.,-1.)
+
+    glColor3f(0,0,1)
+    glVertex2f(1.,-1.)
+    glEnd()
 
 def main():
+    # Initialize the library
     if not glfw.init():
         return
 
